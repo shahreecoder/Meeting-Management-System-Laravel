@@ -1,0 +1,16 @@
+01-Error while migration:
+	step1: Use php artisan db:wipe or delete/drop all the 				tables of your database manually. 
+	Step2:	Update your AppServiceProvider.php [ Located in 			app/Providers/AppServiceProvider.php ]
+			use Illuminate\Support\Facades\Schema;
+			/**
+ 			* Bootstrap any application services.
+ 			*
+ 			* @return void
+ 			*/
+			public function boot()
+				{
+   			 		Schema::defaultStringLength(191); 
+				}
+
+		Step 3: 
+			php artisan migrate
