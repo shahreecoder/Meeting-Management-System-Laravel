@@ -21,3 +21,6 @@
     <br><br>
     <input type="submit" value="Register">
 </form>
+@if (\Session::has('success'))
+   <p style="color: green">{{\Session::get('success')}}</p> 
+@endif

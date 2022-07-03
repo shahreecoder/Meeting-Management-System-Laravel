@@ -15,7 +15,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 Route::get('/login',function(){
-    redirect('/');
+   return redirect('/');
 });
 Route::get('/',[UserController::class,'loadLogin']);
 Route::post('/login',[UserController::class,'userLogin'])->name('userLogin');
@@ -26,5 +26,6 @@ Route::post('/register',[UserController::class,'userRegister'])->name('userRegis
 
 Route::get('/logout',[UserController::class,'logout']);
 
+Route::get('/logout',[UserController::class,'logout']);
 Route::get('/home',[UserController::class,'home']);
 
